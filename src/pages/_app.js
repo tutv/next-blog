@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css'
 import "../styles/index.scss"
 import Layout from "../layout/layout"
 

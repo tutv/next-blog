@@ -1,6 +1,11 @@
+import {Layout} from 'antd'
+
+
 export default function Footer() {
     return (
-        <div>Footer</div>
+        <Layout.Footer className="Footer">
+            Ant Design ©2018 Created by Ant UED
+        </Layout.Footer>
     )
 }
 
