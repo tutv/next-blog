@@ -6,7 +6,7 @@ export default function Header() {
         <NextHead>
             <title>ChoLang Blog</title>
             <meta name="description" content="Cholang.vn blog"/>
-            <link rel="icon" href="/public/favicon.ico"/>
+            <link rel="icon" href="/favicon.png"/>
         </NextHead>
     )
 }
