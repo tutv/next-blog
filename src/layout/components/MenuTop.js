@@ -11,7 +11,7 @@ function MenuTop() {
                 const key = index + 1
                 return {
                     key,
-                    label: `nav ${key}`,
+                    label: `cat ${key}`,
                 }
             })}
         />

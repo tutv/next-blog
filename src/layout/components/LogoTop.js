@@ -1,9 +1,14 @@
 import Image from "next/image"
+import Link from "next/link"
 
 function LogoTop() {
     return (
         <div className="LogoTop">
-            <Image width={50} height={50} src="/logo.png"/>
+            <Link href="/">
+                <a>
+                    <Image width={50} height={50} src="/logo.png"/>
+                </a>
+            </Link>
         </div>
     )
 }

@@ -1,11 +1,12 @@
 import {List, Avatar, Space} from 'antd'
 import {MessageOutlined, LikeOutlined, StarOutlined} from '@ant-design/icons'
 import React from 'react'
+import Link from "next/link"
 
 const listData = []
 for (let i = 0; i < 5; i++) {
     listData.push({
-        href: `/posts/${i}`,
+        href: `/p/${i}`,
         title: `ant design part ${i}`,
         avatar: 'https://joeschmoe.io/api/v1/random',
         description:
@@ -49,7 +50,11 @@ function ListPosts() {
                     >
                         <List.Item.Meta
                             avatar={<Avatar src={item.avatar}/>}
-                            title={<a href={item.href}>{item.title}</a>}
+                            title={
+                                <Link href={item.href}>
+                                    <a>{item.title}</a>
+                                </Link>
+                            }
                             description={item.description}
                         />
                         {item.content}
