@@ -22,9 +22,8 @@ function PostHeader() {
         <div>
             <PageHeader
                 className="site-page-header"
-                title="Title"
+                title="This is a title"
                 breadcrumb={{routes}}
-                subTitle="This is a subtitle"
             />
         </div>
     )
