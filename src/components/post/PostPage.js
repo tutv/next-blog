@@ -1,5 +1,6 @@
 import PostHeader from "./PostHeader"
 
+
 function PostPage() {
     return (
         <div className="PostPage">

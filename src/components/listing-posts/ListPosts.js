@@ -6,7 +6,7 @@ import Link from "next/link"
 const listData = []
 for (let i = 0; i < 5; i++) {
     listData.push({
-        href: `/p/${i}`,
+        href: `/post/${i}`,
         title: `ant design part ${i}`,
         avatar: 'https://joeschmoe.io/api/v1/random',
         description:
