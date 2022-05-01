@@ -2,12 +2,12 @@ import ListPosts from "../listing-posts/ListPosts"
 
 
 function CategoryPage(props) {
-    const {slug} = props
+    const {slug, posts} = props
 
     return (
         <div className="CategoryPage">
             <h1>Category {slug}</h1>
-            <ListPosts/>
+            <ListPosts posts={posts}/>
         </div>
     )
 }
