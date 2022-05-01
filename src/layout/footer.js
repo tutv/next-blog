@@ -4,7 +4,7 @@ import {Layout} from 'antd'
 export default function Footer() {
     return (
         <Layout.Footer className="Footer">
-            Ant Design ©2018 Created by Ant UED
+            Cholang Blog ©2022 Created by Cholang.vn
         </Layout.Footer>
     )
 }

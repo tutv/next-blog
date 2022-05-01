@@ -1,11 +1,14 @@
 import DocTitle from "../../shared/DocTitle"
+import HomePagination from "./HomePagination"
+import ListPosts from "./ListPosts"
 
 
 export default function HomePage() {
     return (
         <div className="HomePage">
             <DocTitle>Trang chủ</DocTitle>
-            <h1>Home page</h1>
+            <ListPosts/>
+            <HomePagination/>
         </div>
     )
 }

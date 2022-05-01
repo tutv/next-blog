@@ -8,7 +8,7 @@ export default function Layout({children}) {
     return (
         <>
             <Header/>
-            <AntLayout  className="layout">
+            <AntLayout  className="Layout">
                 <HeaderTop/>
 
                 <AntLayout.Content className="Main">
