@@ -1,30 +1,30 @@
-import {PageHeader} from 'antd'
-
+import {Breadcrumb, Image} from "antd"
+import Link from "next/link"
+import PostBreadcrumb from "./PostBreadcrumb"
+import PostCover from "./PostCover"
 
 const routes = [
     {
         path: 'index',
-        breadcrumbName: 'First-level Menu',
+        breadcrumbName: 'First-level Menu'
     },
     {
         path: 'first',
-        breadcrumbName: 'Second-level Menu',
+        breadcrumbName: 'Second-level Menu'
     },
     {
         path: 'second',
-        breadcrumbName: 'Third-level Menu',
-    },
+        breadcrumbName: 'Third-level Menu'
+    }
 ]
 
 
 function PostHeader() {
     return (
-        <div>
-            <PageHeader
-                className="site-page-header"
-                title="This is a title"
-                breadcrumb={{routes}}
-            />
+        <div className="PostHeader">
+            <PostBreadcrumb/>
+            <PostCover/>
+            <h1>This is a title</h1>
         </div>
     )
 }
