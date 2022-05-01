@@ -10,7 +10,7 @@ export default function Category(props) {
 
 export async function getServerSideProps(context) {
     const {slug} = context.params
-    const posts = await getListPosts()
+    const posts = await getListPosts({category: slug})
 
     return {
         props: {

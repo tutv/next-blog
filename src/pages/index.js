@@ -9,7 +9,11 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-    const posts = await getListPosts()
+    const {page} = Object.assign({}, context.query)
+    const vPage = page > 0 ? parseInt(page, 10) : 1
+
+    const posts = await getListPosts({page: vPage})
+
 
     return {
         props: {
