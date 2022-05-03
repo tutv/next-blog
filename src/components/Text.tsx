@@ -11,12 +11,19 @@ const _Bold = (content: any, bold?: boolean) => {
     return <strong>{content}</strong>
 }
 
+const _Italic = (content: any, italic?: boolean) => {
+    if (!italic) return content
+
+    return <i>{content}</i>
+}
+
 const Text: FC<Props> = ({content}) => {
     const {plain_text, annotations} = content
 
-    const {bold} = Object.assign({}, annotations)
+    const {bold, italic} = Object.assign({}, annotations)
+    const c1 = _Bold(plain_text || '', bold)
 
-    return _Bold(plain_text || '', bold)
+    return _Italic(c1, italic)
 }
 
 export default Text
