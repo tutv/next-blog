@@ -1,32 +1,23 @@
-import {Breadcrumb, Image} from "antd"
-import Link from "next/link"
 import PostBreadcrumb from "./PostBreadcrumb"
 import PostCover from "./PostCover"
-
-const routes = [
-    {
-        path: 'index',
-        breadcrumbName: 'First-level Menu'
-    },
-    {
-        path: 'first',
-        breadcrumbName: 'Second-level Menu'
-    },
-    {
-        path: 'second',
-        breadcrumbName: 'Third-level Menu'
-    }
-]
+import PropTypes from 'prop-types'
 
 
-function PostHeader() {
+function PostHeader(props) {
+    const {post} = props
+    const {title} = post
+
     return (
         <div className="PostHeader">
-            <PostBreadcrumb/>
-            <PostCover/>
-            <h1>This is a title</h1>
+            <PostBreadcrumb {...props}/>
+            <PostCover {...props}/>
+            <h1>{title}</h1>
         </div>
     )
+}
+
+PostHeader.propTypes = {
+    post: PropTypes.object.isRequired
 }
 
 export default PostHeader

@@ -5,12 +5,14 @@ import LatestPosts from "../sidebar/LatestPosts"
 import PostContent from "./PostContent"
 
 
-function PostPage() {
+function PostPage(props) {
+    const {post} = props
+
     return (
         <div className="PostPage">
             <Row>
                 <Col span={18}>
-                    <PostHeader/>
+                    <PostHeader post={post}/>
                     <PostContent/>
                 </Col>
                 <Col span={6}>
