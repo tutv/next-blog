@@ -14,7 +14,6 @@ export async function getServerSideProps(context) {
 
     const posts = await getListPosts({page: vPage})
 
-
     return {
         props: {
             posts

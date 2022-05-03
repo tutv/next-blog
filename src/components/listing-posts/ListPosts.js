@@ -14,10 +14,12 @@ const IconText = ({icon, text}) => (
 
 
 const _renderItem = (item) => {
+    const {title, slug, _id} = item
+
     return (
         <List.Item
             className="PostItem"
-            key={item.title}
+            key={_id}
             actions={[
                 <IconText icon={StarOutlined} text="156" key="list-vertical-star-o"/>,
                 <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o"/>,
@@ -32,15 +34,14 @@ const _renderItem = (item) => {
             }
         >
             <List.Item.Meta
-                avatar={<Avatar src={item.avatar}/>}
                 title={
-                    <Link href={item.href}>
-                        <a>{item.title}</a>
+                    <Link href={`/post/${slug}`}>
+                        <a>{title}</a>
                     </Link>
                 }
-                description={item.description}
+                description={title}
             />
-            {item.content}
+            {title}
         </List.Item>
     )
 }
