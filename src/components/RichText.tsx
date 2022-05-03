@@ -9,9 +9,9 @@ const RichText: FC<Props> = ({contents}) => {
     return (
         <>
             {
-                contents.map(content => {
+                contents.map((content, index) => {
                     return (
-                        <Text content={content}/>
+                        <Text key={index} content={content}/>
                     )
                 })
             }
