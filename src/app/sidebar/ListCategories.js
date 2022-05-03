@@ -20,7 +20,7 @@ function ListCategories() {
                 dataSource={data}
                 renderItem={(item, index) => {
                     return (
-                        <List.Item>
+                        <List.Item key={index}>
                             <Link href={`/category/${index + 1}`}>
                                 {item}
                             </Link>

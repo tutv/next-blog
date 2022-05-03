@@ -3,6 +3,7 @@ import {Col, Row} from "antd"
 import ListCategories from "../sidebar/ListCategories"
 import LatestPosts from "../sidebar/LatestPosts"
 import PostContent from "./PostContent"
+import PropTypes from "prop-types"
 
 
 function PostPage(props) {
@@ -13,7 +14,7 @@ function PostPage(props) {
             <Row>
                 <Col span={18}>
                     <PostHeader post={post}/>
-                    <PostContent/>
+                    <PostContent post={post}/>
                 </Col>
                 <Col span={6}>
                     <ListCategories/>
@@ -22,6 +23,10 @@ function PostPage(props) {
             </Row>
         </div>
     )
+}
+
+PostPage.propTypes = {
+    post: PropTypes.object.isRequired
 }
 
 export default PostPage
