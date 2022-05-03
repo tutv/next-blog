@@ -6,7 +6,11 @@ export default async () => {
 
     const posts = await Post.find({status: 'active'})
         .select('-contents -source_id -last_synced_at -__v')
-        .limit(100).lean()
+        .sort({
+            created_at: -1
+        })
+        .limit(100)
+        .lean()
 
     return JSON.parse(JSON.stringify(posts))
 }

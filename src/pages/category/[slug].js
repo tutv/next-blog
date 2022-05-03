@@ -1,4 +1,4 @@
-import CategoryPage from "../../components/category/CategoryPage"
+import CategoryPage from "../../app/category/CategoryPage"
 import getListPosts from "../../actions/post/getListPosts"
 
 

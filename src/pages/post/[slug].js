@@ -1,4 +1,4 @@
-import PostPage from "../../components/post/PostPage"
+import PostPage from "../../app/post/PostPage"
 import getPostBySlug from "../../actions/post/getPostBySlug"
 
 

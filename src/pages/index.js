@@ -1,4 +1,4 @@
-import HomePage from "../components/home/HomePage"
+import HomePage from "../app/home/HomePage"
 import getListPosts from "../actions/post/getListPosts"
 
 

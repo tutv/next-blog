@@ -1,4 +1,4 @@
-import SearchPage from "../components/search/SearchPage"
+import SearchPage from "../app/search/SearchPage"
 import getListPosts from "../actions/post/getListPosts"
 
 
