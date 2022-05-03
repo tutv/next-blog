@@ -1,5 +1,5 @@
 import {FC} from "react"
-
+import Text from '@components/Text'
 
 interface Props {
     contents: Record<string, any>[]
@@ -10,9 +10,9 @@ const RichText: FC<Props> = ({contents}) => {
         <>
             {
                 contents.map(content => {
-                    const {plain_text} = content
-
-                    return plain_text || ''
+                    return (
+                        <Text content={content}/>
+                    )
                 })
             }
         </>
