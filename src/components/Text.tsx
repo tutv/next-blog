@@ -17,13 +17,26 @@ const _Italic = (content: any, italic?: boolean) => {
     return <i>{content}</i>
 }
 
+const _withLink = (content: any, link?: any) => {
+    const {url} = Object.assign({}, link)
+    if (!url) return content
+
+    return (
+        <a href={url} target="_blank" rel="noopener noreferrer">{content}</a>
+    )
+}
+
 const Text: FC<Props> = ({content}) => {
-    const {plain_text, annotations} = content
+    const {plain_text, annotations, text} = content
+
 
     const {bold, italic} = Object.assign({}, annotations)
-    const c1 = _Bold(plain_text || '', bold)
+    const c1 = _Italic(plain_text || '', italic)
+    const c2 = _Bold(c1, bold)
 
-    return _Italic(c1, italic)
+    const {link} = Object.assign({}, text)
+
+    return _withLink(c2, link)
 }
 
 export default Text

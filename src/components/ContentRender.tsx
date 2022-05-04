@@ -27,7 +27,7 @@ const _renderContent = (content: Record<string, any>, index: number) => {
     const {type, id} = content
 
     const MappedComponent = _maps[type]
-    if (!MappedComponent) return <NotSupported content={content}/>
+    if (!MappedComponent) return <NotSupported key={id || index} content={content}/>
 
     return (
         <div className="ContentItem" key={id || index} data-block-id={id}>

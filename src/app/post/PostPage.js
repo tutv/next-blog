@@ -13,11 +13,11 @@ function PostPage(props) {
     return (
         <div className="PostPage">
             <Row>
-                <Col span={16}>
+                <Col lg={{span: 16}} xs={{span: 24}}>
                     <PostHeader post={post}/>
                     <PostContent post={post}/>
                 </Col>
-                <Col span={8}>
+                <Col lg={{span: 8}} xs={{span: 24}}>
                     <PostTableOfContents post={post}/>
                     <ListCategories/>
                     <LatestPosts/>
