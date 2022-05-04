@@ -9,8 +9,8 @@ const _renderItem = (item, index) => {
     if (!types.includes(type)) return null
 
     return (
-        <div data-block-id={id}>
-            <TocItem key={id || index} item={item}/>
+        <div key={id || index} data-block-id={id}>
+            <TocItem item={item}/>
         </div>
     )
 }
