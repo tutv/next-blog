@@ -7,6 +7,7 @@ import Heading2 from "@components/Heading2"
 import Heading3 from "@components/Heading3"
 import Heading1 from "@components/Heading1"
 import MyQuote from "@components/MyQuote"
+import Callout from "@components/Callout"
 
 
 interface Props {
@@ -20,7 +21,8 @@ const _maps: Record<string, any> = {
     heading_1: Heading1,
     heading_2: Heading2,
     heading_3: Heading3,
-    quote: MyQuote
+    quote: MyQuote,
+    callout: Callout,
 }
 
 const _renderContent = (content: Record<string, any>, index: number) => {

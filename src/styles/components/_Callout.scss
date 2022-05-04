@@ -1,0 +1,14 @@
+.Callout {
+  margin: 0.5rem 0;
+
+  .Inner {
+    padding: 1rem;
+    background: rgb(241, 241, 239);
+    display: flex;
+
+    .Icon {
+      padding-right: 1rem;
+    }
+  }
+}
+

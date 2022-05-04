@@ -9,7 +9,7 @@ interface Props {
 const Paragraph: FC<Props> = ({content}) => {
     const {paragraph} = content
     const {rich_text} = paragraph
-    if (!rich_text || !Array.isArray(rich_text) || !rich_text.length) return null
+    if (!rich_text || !Array.isArray(rich_text) || !rich_text.length) return <p/>
 
 
     return (
