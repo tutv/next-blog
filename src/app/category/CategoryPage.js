@@ -11,11 +11,11 @@ function CategoryPage(props) {
         <div className="CategoryPage">
             <h1>Category {slug}</h1>
             <Row>
-                <Col span={18}>
+                <Col lg={{span: 16}} xs={{span: 24}}>
                     <ListPosts posts={posts}/>
                 </Col>
 
-                <Col span={6}>
+                <Col lg={{span: 8}} xs={{span: 24}}>
                     <ListCategories/>
                     <LatestPosts/>
                 </Col>
