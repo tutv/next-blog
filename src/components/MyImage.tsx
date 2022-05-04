@@ -20,7 +20,7 @@ const _getAltFromCaption = (caption?: Record<string, any>[]) => {
 }
 
 const MyImage: FC<Props> = ({content}) => {
-    const {image} = content
+    const {image, id} = content
     const {file, caption} = Object.assign({}, image)
     if (!file) return null
 
@@ -30,7 +30,7 @@ const MyImage: FC<Props> = ({content}) => {
     const alt = _getAltFromCaption(caption)
 
     return (
-        <Image alt={alt} className="MyImage" src={url}/>
+        <Image alt={alt} className="MyImage" src={`/api/image/${id}`}/>
     )
 }
 

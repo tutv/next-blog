@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@cholang/blog-schemas": "^1.0.2",
+    "@notionhq/client": "^1.0.4",
     "antd": "^4.20.2",
     "next": "12.1.5",
     "prop-types": "^15.8.1",
