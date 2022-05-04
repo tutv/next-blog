@@ -51,10 +51,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@cholang/blog-schemas@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@cholang/blog-schemas/-/blog-schemas-1.0.2.tgz#8408bd9eb2dac96cfa4661ea9082f2c2839d3e02"
-  integrity sha512-m9MGcgYhR8XirBzDr143DXGJThzuGPWtPEnIGExx8NZatJ0x7y1JLcHLxoF94OEWfM0kMIjj9Yp89IvCu2uL0A==
+"@cholang/blog-schemas@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@cholang/blog-schemas/-/blog-schemas-1.0.4.tgz#25f76afb90a45ddf0a9ba5586a53af66d7752482"
+  integrity sha512-qbQFPexjsxD8fvpUWPm6n77peTIGTJg3iOsr+M5RmxD7ciyQRMqw01k4VK0MUZ4JdcGXyeHscQCheG5yUcUduQ==
   dependencies:
     mongoose "^5.13.14"
 
