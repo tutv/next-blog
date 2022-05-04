@@ -1,9 +1,20 @@
-import {FC} from "react"
+import {FC, useEffect} from "react"
 import RichText from "@components/RichText"
 
 
 interface Props {
     content: Record<string, any>
+}
+
+const _normalizeEmoji = (content: any) => {
+    if (!content) return ''
+
+    if (typeof content === 'string') return content
+
+    const keys = Object.keys(content)
+    const arr = keys.map(key => content[key])
+
+    return arr.join('')
 }
 
 const _renderIcon = (icon: Record<string, any>) => {
@@ -14,11 +25,11 @@ const _renderIcon = (icon: Record<string, any>) => {
     const content = Object.assign({}, icon[type])
     if (!content) return null
 
-    console.log('icon toString', content.toString())
+    const str = _normalizeEmoji(content)
 
     return (
         <div className="Icon">
-            {"__"}
+            {str}
         </div>
     )
 }
