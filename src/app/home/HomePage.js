@@ -11,11 +11,11 @@ export default function HomePage(props) {
         <div className="HomePage">
             <DocTitle>Trang chủ</DocTitle>
             <Row>
-                <Col span={18}>
+                <Col lg={{span: 16}} xs={{span: 24}}>
                     <ListPosts {...props}/>
                     <HomePagination/>
                 </Col>
-                <Col span={6}>
+                <Col lg={{span: 8}} xs={{span: 24}}>
                     <ListCategories/>
                     <LatestPosts/>
                 </Col>
