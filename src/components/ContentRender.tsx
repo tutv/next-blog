@@ -30,8 +30,8 @@ const _renderContent = (content: Record<string, any>, index: number) => {
     if (!MappedComponent) return <NotSupported content={content}/>
 
     return (
-        <div className="ContentItem" data-block-id={id}>
-            <MappedComponent key={id || index} content={content}/>
+        <div className="ContentItem" key={id || index} data-block-id={id}>
+            <MappedComponent content={content}/>
         </div>
     )
 }
