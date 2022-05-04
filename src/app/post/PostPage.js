@@ -4,6 +4,7 @@ import ListCategories from "../sidebar/ListCategories"
 import LatestPosts from "../sidebar/LatestPosts"
 import PostContent from "./PostContent"
 import PropTypes from "prop-types"
+import PostTableOfContents from "./PostTableOfContents"
 
 
 function PostPage(props) {
@@ -18,6 +19,7 @@ function PostPage(props) {
                 </Col>
                 <Col span={6}>
                     <ListCategories/>
+                    <PostTableOfContents post={post}/>
                     <LatestPosts/>
                 </Col>
             </Row>

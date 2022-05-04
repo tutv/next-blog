@@ -29,7 +29,11 @@ const _renderContent = (content: Record<string, any>, index: number) => {
     const MappedComponent = _maps[type]
     if (!MappedComponent) return <NotSupported content={content}/>
 
-    return <MappedComponent key={id || index} content={content}/>
+    return (
+        <div className="ContentItem" data-block-id={id}>
+            <MappedComponent key={id || index} content={content}/>
+        </div>
+    )
 }
 
 const ContentRender: FC<Props> = (props) => {
