@@ -6,6 +6,7 @@ import NotSupported from "@components/NotSupported"
 import Heading2 from "@components/Heading2"
 import Heading3 from "@components/Heading3"
 import Heading1 from "@components/Heading1"
+import MyQuote from "@components/MyQuote"
 
 
 interface Props {
@@ -18,16 +19,17 @@ const _maps: Record<string, any> = {
     image: MyImage,
     heading_1: Heading1,
     heading_2: Heading2,
-    heading_3: Heading3
+    heading_3: Heading3,
+    quote: MyQuote
 }
 
-const _renderContent = (content: Record<string, any>) => {
-    const {type} = content
+const _renderContent = (content: Record<string, any>, index: number) => {
+    const {type, id} = content
 
     const MappedComponent = _maps[type]
     if (!MappedComponent) return <NotSupported content={content}/>
 
-    return <MappedComponent content={content}/>
+    return <MappedComponent key={id || index} content={content}/>
 }
 
 const ContentRender: FC<Props> = (props) => {
