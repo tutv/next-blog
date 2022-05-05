@@ -1,8 +1,23 @@
 .BulletedListItem {
-  &:before {
-    content: "•";
-    line-height: 1;
-    font-size: 1.5rem;
-    padding-right: 0.25rem;
+  .Inner {
+    display: flex;
+    width: 100%;
+
+    .PseudoBefore {
+      width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 3px;
+
+      &:before {
+        content: "•";
+        line-height: 1;
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
+      }
+    }
   }
+
+
 }

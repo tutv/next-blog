@@ -35,25 +35,42 @@ const _maps: Record<string, any> = {
     code: CodeViewer,
 }
 
-const _renderContent = (content: Record<string, any>, index: number) => {
+const _renderContent = (state: Record<string, any>) => (content: Record<string, any>, index: number) => {
+    const {previousContent} = state
+    state.previousContent = content
+
     const {type, id} = content
 
     const MappedComponent = _maps[type]
     if (!MappedComponent) return <NotSupported key={id || index} content={content}/>
 
+    const {type: previousType} = Object.assign({}, previousContent)
+    if (previousType) {
+        if (previousType === type) {
+            state.listIndex++
+        } else {
+            state.listIndex = 1
+        }
+    }
+
+    const {listIndex} = state
+
     return (
         <div className="ContentItem" key={id || index} data-block-id={id}>
-            <MappedComponent content={content}/>
+            <MappedComponent listIndex={listIndex} content={content}/>
         </div>
     )
 }
 
-const ContentRender: FC<Props> = (props) => {
-    const {contents} = props
+const ContentRender: FC<Props> = ({contents}) => {
+    const state: Record<string, any> = {
+        listIndex: 1,
+        previousContent: null
+    }
 
     return (
         <>
-            {contents.map(_renderContent)}
+            {contents.map(_renderContent(state))}
         </>
     )
 }

@@ -13,7 +13,14 @@ const BulletedListItem: FC<Props> = ({content}) => {
 
 
     return (
-        <div className="BulletedListItem"><RichText contents={rich_text}/></div>
+        <div className="BulletedListItem">
+            <div className="Inner">
+                <span className="PseudoBefore"/>
+                <span className="Text">
+                <RichText contents={rich_text}/>
+            </span>
+            </div>
+        </div>
     )
 }
 

@@ -1,0 +1,18 @@
+.NumberedListItem {
+.Inner {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  .PseudoBefore {
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      content: var(--pseudoBefore--content);
+    }
+  }
+}
+}
