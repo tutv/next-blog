@@ -35,6 +35,7 @@ const _maps: Record<string, any> = {
     code: CodeViewer,
 }
 
+/*eslint-disable */
 const _renderContent = (state: Record<string, any>) => (content: Record<string, any>, index: number) => {
     const {previousContent} = state
     state.previousContent = content
