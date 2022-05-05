@@ -8,6 +8,11 @@ import Heading3 from "@components/Heading3"
 import Heading1 from "@components/Heading1"
 import MyQuote from "@components/MyQuote"
 import Callout from "@components/Callout"
+import BulletedListItem from "@components/BulletedListItem"
+import NumberedListItem from "@components/NumberedListItem"
+import TodoItem from "@components/TodoItem"
+import Divider from "@components/Divider"
+import CodeViewer from "@components/CodeViewer"
 
 
 interface Props {
@@ -23,6 +28,11 @@ const _maps: Record<string, any> = {
     heading_3: Heading3,
     quote: MyQuote,
     callout: Callout,
+    bulleted_list_item: BulletedListItem,
+    numbered_list_item: NumberedListItem,
+    to_do: TodoItem,
+    divider: Divider,
+    code: CodeViewer,
 }
 
 const _renderContent = (content: Record<string, any>, index: number) => {

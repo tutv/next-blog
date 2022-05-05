@@ -27,14 +27,12 @@ const _withLink = (content: any, link?: any) => {
 }
 
 const Text: FC<Props> = ({content}) => {
-    const {plain_text, annotations, text} = content
-
+    const {annotations, text} = content
+    const {link, content: contentText} = Object.assign({}, text)
 
     const {bold, italic} = Object.assign({}, annotations)
-    const c1 = _Italic(plain_text || '', italic)
+    const c1 = _Italic(contentText || '', italic)
     const c2 = _Bold(c1, bold)
-
-    const {link} = Object.assign({}, text)
 
     return _withLink(c2, link)
 }
