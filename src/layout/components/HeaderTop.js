@@ -7,7 +7,6 @@ function HeaderTop() {
     return (
         <Layout.Header className="HeaderTop">
             <LogoTop/>
-            <MenuTop/>
         </Layout.Header>
     )
 }

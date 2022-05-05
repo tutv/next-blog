@@ -3,7 +3,8 @@ import Link from "next/link"
 
 
 function PostBreadcrumb(props) {
-    const {title} = props.post
+    const {title, category} = props.post
+    const {name, slug} = Object.assign({}, category)
 
     return (
         <div className="PostBreadcrumb">
@@ -13,6 +14,15 @@ function PostBreadcrumb(props) {
                         <a>Trang chủ</a>
                     </Link>
                 </Breadcrumb.Item>
+                {
+                    !!slug && (
+                        <Breadcrumb.Item>
+                            <Link href={`/category/${slug}`}>
+                                <a>{name}</a>
+                            </Link>
+                        </Breadcrumb.Item>
+                    )
+                }
                 <Breadcrumb.Item>{title}</Breadcrumb.Item>
             </Breadcrumb>
         </div>
