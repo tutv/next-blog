@@ -1,5 +1,4 @@
 import DocTitle from "../../shared/DocTitle"
-import HomePagination from "./HomePagination"
 import ListPosts from "../listing-posts/ListPosts"
 import {Col, Row} from "antd"
 import ListCategories from "../sidebar/ListCategories"
@@ -13,7 +12,6 @@ export default function HomePage(props) {
             <Row>
                 <Col lg={{span: 16}} xs={{span: 24}}>
                     <ListPosts {...props}/>
-                    <HomePagination/>
                 </Col>
                 <Col lg={{span: 8}} xs={{span: 24}}>
                     <ListCategories/>

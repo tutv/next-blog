@@ -9,7 +9,7 @@ export default async () => {
         .populate({
             path: 'category',
             model: Category,
-            select: 'name slug'
+            select: 'name slug color'
         })
         .select('-contents -source_id -last_synced_at -__v')
         .sort({
