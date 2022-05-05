@@ -33,7 +33,7 @@ class PostItem extends Component {
                     <img
                         width={272}
                         alt="logo"
-                        src="https://www.notion.so/images/page-cover/woodcuts_10.jpg"
+                        src={`/api/post/${_id}/cover`}
                     />
                 }>
                 <List.Item.Meta

@@ -1,9 +1,10 @@
 import {Image} from "antd"
 
 
-function PostCover() {
+function PostCover({post}) {
+    const {_id} = post
     return (
-        <Image src="https://www.notion.so/images/page-cover/woodcuts_10.jpg" preview={false} alt="Cover"/>
+        <Image src={`/api/post/${_id}/cover`} preview={false} alt="Cover"/>
     )
 }
 
