@@ -3,5 +3,5 @@ export default (time) => {
 
     const vMinutes = Math.max(1, minutes)
 
-    return `${vMinutes} phút`
+    return `${vMinutes} phút đọc`
 }
