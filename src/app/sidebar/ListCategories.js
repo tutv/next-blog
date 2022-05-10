@@ -56,7 +56,7 @@ class ListCategories extends Component {
             <div className={classNames("ListCategories", {loading})}>
                 <List
                     size="large"
-                    header={<h3>Danh mục {loading ? 'loading...' : ''}</h3>}
+                    header={<h3>Danh mục {loading ? '...' : ''}</h3>}
                     dataSource={categories}
                     renderItem={(item, index) => {
                         return (
