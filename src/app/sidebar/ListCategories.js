@@ -1,8 +1,7 @@
 import {List} from "antd"
-import Link from "next/link"
 import {Component} from "react"
 import classNames from 'classnames'
-import dynamic from "next/dynamic"
+import CategoryItem from "./CategoryItem"
 
 
 const _fetchListCategories = async () => {
@@ -60,14 +59,8 @@ class ListCategories extends Component {
                     header={<h3>Danh mục {loading ? 'loading...' : ''}</h3>}
                     dataSource={categories}
                     renderItem={(item, index) => {
-                        const {name, slug} = item
-
                         return (
-                            <List.Item key={index}>
-                                <Link href={`/category/${slug}`}>
-                                    {name}
-                                </Link>
-                            </List.Item>
+                            <CategoryItem category={item} key={index}/>
                         )
                     }
                     }

@@ -1,11 +1,35 @@
 const {getModel} = require('../../connections/database')
 
 
-export default async () => {
+const _buildQuery = async (args) => {
+    const query = {
+        status: 'active'
+    }
+
+    const {category} = Object.assign({}, args)
+
+    if (category) {
+        const Category = getModel('Category')
+        const cat = await Category.findOne({slug: category}).select('_id').lean()
+
+        if (!cat) throw new Error('Category not found.')
+
+        query.category = cat._id
+    }
+
+    return {
+        query,
+    }
+}
+
+
+export default async (args = {}) => {
     const Post = getModel('Post')
     const Category = getModel('Category')
 
-    const posts = await Post.find({status: 'active'})
+    const {query} = await _buildQuery(args)
+
+    const posts = await Post.find(query)
         .populate({
             path: 'category',
             model: Category,
