@@ -1,0 +1,11 @@
+.PostMeta {
+  margin-bottom: 1rem;
+
+  .ant-descriptions-item-container {
+    align-items: center;
+
+    .ant-descriptions-item-content, .ant-descriptions-item-label {
+      color: #00000073;
+    }
+  }
+}
