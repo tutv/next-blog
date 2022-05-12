@@ -1,5 +1,6 @@
 const notion = require('../../connections/notion')
 const {getModel} = require('../../connections/database')
+const got = require('got')
 
 
 export default async (id) => {
@@ -14,6 +15,8 @@ export default async (id) => {
     const {type} = Object.assign({}, cover)
     const {url} = Object.assign({}, cover[type])
 
-    return url || defaultUrl
+    const vUrl = url || defaultUrl
+
+    return got.stream(vUrl)
 }
 

@@ -1,4 +1,5 @@
 const notion = require('../../connections/notion')
+const got = require('got')
 
 
 export default async (id) => {
@@ -6,6 +7,6 @@ export default async (id) => {
     const {file} = Object.assign({}, image)
     const {url} = Object.assign({}, file)
 
-    return url
+    return got.stream(url)
 }
 

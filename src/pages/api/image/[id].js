@@ -4,9 +4,9 @@ import getImageUrl from "../../../actions/image/getImageUrl"
 export default async function handler(req, res) {
     try {
         const {id} = req.query
-        const url = await getImageUrl(id)
+        const stream = await getImageUrl(id)
 
-        res.redirect(url)
+        stream.pipe(res)
     } catch (error) {
         console.error(error)
 
