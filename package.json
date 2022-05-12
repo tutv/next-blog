@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@cholang/blog-schemas": "^1.0.5",
+    "@cholang/blog-schemas": "^1.0.6",
     "@notionhq/client": "^1.0.4",
     "antd": "^4.20.2",
     "classnames": "^2.3.1",

@@ -17,11 +17,9 @@ const IconText = ({icon, text}) => (
 
 class PostItem extends Component {
     render() {
-        const {title, slug, _id, category, created_at, reading_time} = this.props.post
+        const {title, slug, _id, category, created_at, reading_time, excerpt} = this.props.post
         const str = moment(created_at).format('DD/MM/YYYY')
         const readingTime = readingTimeText(reading_time)
-
-        const des = 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.'
 
         return (
             <List.Item
@@ -45,7 +43,7 @@ class PostItem extends Component {
                             <a>{title}</a>
                         </Link>
                     }
-                    description={des}
+                    description={(excerpt || '') + '...'}
                 />
             </List.Item>
         )
